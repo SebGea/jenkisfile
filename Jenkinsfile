@@ -10,10 +10,19 @@ string(name: 'AGE', description: 'Age ?')
 stages {
     stage('Printing Parameters') {
         steps {
-            echo "Bonjour ${params.FIRSTNAME} ${params.NAME}"
-            echo "Vous etes un(e) ${params.GENDER}."
-            echo "Vous êtes né(e) le ${params.DATE}, vous avez ${params.AGE} ans."
-        }
+               script {
+                     def prenom = "${params.FIRSTNAME}"
+                     def nom = "${params.NAME}"
+                     def genre = "${params.GENDER}"
+                     def date = "${params.DATE}"
+                     def age = "${params.AGE}"
+
+                          echo "Bonjour $prenom $nom"
+                          echo "Vous etes un(e) $genre."
+                          echo "Vous êtes né(e) le $date, vous avez $age ans."
+                             sleep 5
+                      }
+              }
     }
 
         stage('Collection de datas') {
