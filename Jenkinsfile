@@ -11,8 +11,8 @@ stages {
     stage('Printing Parameters') {
         steps {
             echo "Bonjour ${params.FIRSTNAME} ${params.NAME}"
-            echo "Vous etes un(e) ${params.GENDER}
-            echo "Vous êtes né(e) le ${params.DATE}, vous avez ${params.AGE} ans.
+            echo "Vous etes un(e) ${params.GENDER}."
+            echo "Vous êtes né(e) le ${params.DATE}, vous avez ${params.AGE} ans."
         }
     }
 
