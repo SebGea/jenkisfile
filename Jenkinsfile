@@ -8,7 +8,7 @@ pipeline {
        string(name: 'AGE', description: 'Age ?')
        }
 stages {
-    stage('Printing Parameters') {
+    stage('Paramètres') {
         steps {
                script {
                      def prenom = "${params.FIRSTNAME}"
