@@ -8,7 +8,7 @@ pipeline {
        string(name: 'AGE', description: 'Age ?')
        }
 stages {
-    stage('Paramètres') {
+    stage('Parametres') {
         steps {
                script {
                      def prenom = "${params.FIRSTNAME}"
@@ -37,7 +37,7 @@ stages {
             }
         }
 
-        stage('Génération du Diagramme') {
+        stage('Generation du Diagramme') {
             steps {
                 echo "Génération du diagramme..."
                 sleep 5 
