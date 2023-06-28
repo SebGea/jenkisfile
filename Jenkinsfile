@@ -1,4 +1,4 @@
-pipeline {
+hpipeline {
        agent any
        parameters {
        string(name: 'NAME', description: 'Nom ?')
@@ -27,6 +27,8 @@ stages {
 
         stage('Collection de datas') {
             steps {
+                echo "Prise en compte de l'équipement..."
+                sleep 5
                 echo "Analyse en cours de la fréquence cardiaque..."
                 sleep 5
                 echo "Analyse en cours des différentes phases de sommeil..."
