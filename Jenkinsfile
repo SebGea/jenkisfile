@@ -1,4 +1,4 @@
-hpipeline {
+pipeline {
        agent any
        parameters {
        string(name: 'NAME', description: 'Nom ?')
