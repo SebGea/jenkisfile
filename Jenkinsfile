@@ -6,7 +6,7 @@ string(name: 'FIRSTNAME', description: 'Prénom ?')
 choice(name: 'GENDER', choices: ['Homme', 'Femme'], description: 'Sexe ?)
 string(name: 'DATE', description: 'Date de naissance ?')
 string(name: 'AGE', description: 'Age ?')
-}
+       }}
 stages {
     stage('Printing Parameters') {
         steps {
@@ -16,20 +16,21 @@ stages {
         }
     }
 
-    stage('BUILD') {
+        stage('Collection de datas') {
             steps {
-                echo 'Developpement'
+                echo "Analyse en cours de la fréquence cardiaque..."
+                sleep 5
+                echo "Analyse en cours des différentes phases de sommeil..."
+                sleep 5
+                echo "Les analyses ont été réalisées avec succes."
             }
         }
-        stage('Test') {
+
+        stage('Génération du Diagramme') {
             steps {
-                echo 'Testing'
+                echo "Génération du diagramme..."
+                sleep 5 
+                echo "Diagramme complété."
             }
-        }
-        stage('DEPLOY') {
-            steps {
-                echo 'Mise en Production'
-            }
-        }
-    }
+        }   
 }
