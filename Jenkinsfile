@@ -1,8 +1,9 @@
 pipeline {
 agent any
 parameters {
-string(name: 'NAME', description: 'Please tell me your name')
-choice(name: 'GENDER', choices: ['Male', 'Female'], description: 'Choose Gender')
+string(name: 'NAME', description: 'Nom ?')
+string(name: 'NAME', description: 'Nom ?')
+choice(name: 'GENDER', choices: ['Male', 'Female'], description: 'Sexe ?)
 }
 stages {
     stage('Printing name') {
