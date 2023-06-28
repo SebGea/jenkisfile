@@ -2,22 +2,16 @@ pipeline {
 agent any
 parameters {
 string(name: 'NAME', description: 'Nom ?')
-string(name: 'NAME', description: 'Nom ?')
-choice(name: 'GENDER', choices: ['Male', 'Female'], description: 'Sexe ?)
+string(name: 'FIRSTNAME', description: 'Prénom ?')
+choice(name: 'GENDER', choices: ['Homme', 'Femme'], description: 'Sexe ?)
+string(name: 'DATE', description: 'Date de naissance ?')
+string(name: 'AGE', description: 'Age ?')
 }
 stages {
-    stage('Printing name') {
+    stage('Printing Parameters') {
         steps {
-            script {
-                def name = "${params.NAME}"
-                def gender = "${params.GENDER}"
-                if(gender == "Male") {
-                echo "Mr. $name"
-                        }
-                else {
-                echo "Mrs. $name"
-                }
-            }
+            echo "Bonjour ${params.FIRSTNAME} ${params.NAME}"
+            echo "Vous etes un(e) ${params.GENDER}
         }
     }
 
