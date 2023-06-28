@@ -19,7 +19,7 @@ stages {
 
                           echo "Bonjour $prenom $nom"
                           echo "Vous etes un(e) $genre."
-                          echo "Vous êtes né(e) le $date, vous avez $age ans."
+                          echo "Vous etes né(e) le $date, vous avez $age ans."
                              sleep 5
                       }
               }
